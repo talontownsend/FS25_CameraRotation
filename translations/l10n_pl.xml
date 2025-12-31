@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Obrót Kamery" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Obrót Kamery Włączony" />
+    <text name="settingDescription_cameraRotationEnabled" text="Włącz obrót" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Obrót Kamery Trzeciej Osoby" />
+    <text name="settingDescription_thirdPersonRotation" text="Włącz dla kamer zewnętrznych" />
+
+    <text name="settingTitle_rotationSpeed" text="Prędkość Obrotu" />
+    <text name="settingDescription_rotationSpeed" text="Prędkość obrotu" />
+
+    <text name="settingTitle_rotationDelay" text="Opóźnienie Obrotu" />
+    <text name="settingDescription_rotationDelay" text="Wygładzanie obrotu" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="Limit Obrotu" />
+    <text name="settingDescription_maxRotationAngle" text="Max kąt" />
+
+    <text name="settingTitle_reverseFlip" text="Odwrócenie przy Cofaniu" />
+    <text name="settingDescription_reverseFlip" text="Odwracać przy cofaniu" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Przełącz Obrót Kamery" />
+
+  </texts>
+</l10n>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Kameran kierto" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Kameran kierto käytössä" />
+    <text name="settingDescription_cameraRotationEnabled" text="Ota kierto käyttöön" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Kolmannen Henkilön Kierto" />
+    <text name="settingDescription_thirdPersonRotation" text="Ota käyttöön ulkoisille kameraille" />
+
+    <text name="settingTitle_rotationSpeed" text="Kiertonopeus" />
+    <text name="settingDescription_rotationSpeed" text="Kiertonopeus" />
+
+    <text name="settingTitle_rotationDelay" text="Kiertoviive" />
+    <text name="settingDescription_rotationDelay" text="Kierron tasoitus" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="Kierron raja" />
+    <text name="settingDescription_maxRotationAngle" text="Max kulma" />
+
+    <text name="settingTitle_reverseFlip" text="Peruutuskierto" />
+    <text name="settingDescription_reverseFlip" text="Kierrä peruuttaessa" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Vaihda Kameran Kierto" />
+
+  </texts>
+</l10n>
+

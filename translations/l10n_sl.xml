@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Vrtenje kamere" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Vrtenje kamere omogočeno" />
+    <text name="settingDescription_cameraRotationEnabled" text="Omogoči vrtenje" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Vrtenje Tretje Osebe" />
+    <text name="settingDescription_thirdPersonRotation" text="Omogoči za zunanje kamere" />
+
+    <text name="settingTitle_rotationSpeed" text="Hitrost vrtenja" />
+    <text name="settingDescription_rotationSpeed" text="Hitrost vrtenja" />
+
+    <text name="settingTitle_rotationDelay" text="Zakasnitev vrtenja" />
+    <text name="settingDescription_rotationDelay" text="Glajenje vrtenja" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="Omejitev vrtenja" />
+    <text name="settingDescription_maxRotationAngle" text="Max kot" />
+
+    <text name="settingTitle_reverseFlip" text="Obrat pri vožnji nazaj" />
+    <text name="settingDescription_reverseFlip" text="Obrat pri vožnji nazaj" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Preklopi Vrtenje Kamere" />
+
+  </texts>
+</l10n>
+

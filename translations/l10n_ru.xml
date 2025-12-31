@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Поворот камеры" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Поворот камеры включен" />
+    <text name="settingDescription_cameraRotationEnabled" text="Включить поворот" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Поворот камеры от третьего лица" />
+    <text name="settingDescription_thirdPersonRotation" text="Включить для внешних камер" />
+
+    <text name="settingTitle_rotationSpeed" text="Скорость поворота" />
+    <text name="settingDescription_rotationSpeed" text="Скорость поворота" />
+
+    <text name="settingTitle_rotationDelay" text="Задержка поворота" />
+    <text name="settingDescription_rotationDelay" text="Сглаживание поворота" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="Предел поворота" />
+    <text name="settingDescription_maxRotationAngle" text="Макс угол" />
+
+    <text name="settingTitle_reverseFlip" text="Переворот при заднем ходе" />
+    <text name="settingDescription_reverseFlip" text="Переворачивать при заднем ходе" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Переключить поворот камеры" />
+
+  </texts>
+</l10n>
+

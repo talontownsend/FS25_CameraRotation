@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="카메라 회전" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="카메라 회전 활성화" />
+    <text name="settingDescription_cameraRotationEnabled" text="회전 활성화" />
+
+    <text name="settingTitle_thirdPersonRotation" text="3인칭 회전" />
+    <text name="settingDescription_thirdPersonRotation" text="외부 카메라 활성화" />
+
+    <text name="settingTitle_rotationSpeed" text="회전 속도" />
+    <text name="settingDescription_rotationSpeed" text="회전 속도" />
+
+    <text name="settingTitle_rotationDelay" text="회전 지연" />
+    <text name="settingDescription_rotationDelay" text="회전 부드러움" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="회전 제한" />
+    <text name="settingDescription_maxRotationAngle" text="최대 각도" />
+
+    <text name="settingTitle_reverseFlip" text="후진 뒤집기" />
+    <text name="settingDescription_reverseFlip" text="후진 시 뒤집기" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="카메라 회전 전환" />
+
+  </texts>
+</l10n>
+

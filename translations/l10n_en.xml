@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Camera Rotation" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Camera Rotation Enabled" />
+    <text name="settingDescription_cameraRotationEnabled" text="Enable camera rotation" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Third Person Rotation" />
+    <text name="settingDescription_thirdPersonRotation" text="Enable for outside cameras" />
+
+    <text name="settingTitle_rotationSpeed" text="Rotation Speed" />
+    <text name="settingDescription_rotationSpeed" text="Linear coefficient to steering angle" />
+
+    <text name="settingTitle_rotationDelay" text="Rotation Delay" />
+    <text name="settingDescription_rotationDelay" text="Spring arm response time" />
+
+    <text name="settingTitle_maxRotationAngle" text="Rotation Limit" />
+    <text name="settingDescription_maxRotationAngle" text="Max rotation angle" />
+
+    <text name="settingTitle_reverseFlip" text="Reverse Flip" />
+    <text name="settingDescription_reverseFlip" text="Flip camera when reversing" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Toggle Camera Rotation" />
+
+  </texts>
+</l10n>
+

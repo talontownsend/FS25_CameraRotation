@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="摄像机旋转" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="启用摄像机旋转" />
+    <text name="settingDescription_cameraRotationEnabled" text="启用旋转" />
+
+    <text name="settingTitle_thirdPersonRotation" text="第三人称旋转" />
+    <text name="settingDescription_thirdPersonRotation" text="启用外部摄像机" />
+
+    <text name="settingTitle_rotationSpeed" text="旋转速度" />
+    <text name="settingDescription_rotationSpeed" text="旋转速度" />
+
+    <text name="settingTitle_rotationDelay" text="旋转延迟" />
+    <text name="settingDescription_rotationDelay" text="旋转平滑度" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="旋转限制" />
+    <text name="settingDescription_maxRotationAngle" text="最大角度" />
+
+    <text name="settingTitle_reverseFlip" text="倒车翻转" />
+    <text name="settingDescription_reverseFlip" text="倒车时翻转" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="切换摄像机旋转" />
+
+  </texts>
+</l10n>
+

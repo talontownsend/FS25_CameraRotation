@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Camerarotatie" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Camerarotatie Ingeschakeld" />
+    <text name="settingDescription_cameraRotationEnabled" text="Rotatie inschakelen" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Derde Persoon Rotatie" />
+    <text name="settingDescription_thirdPersonRotation" text="Inschakelen voor externe camera's" />
+
+    <text name="settingTitle_rotationSpeed" text="Rotatiesnelheid" />
+    <text name="settingDescription_rotationSpeed" text="Rotatiesnelheid" />
+
+    <text name="settingTitle_rotationDelay" text="Rotatievertraging" />
+    <text name="settingDescription_rotationDelay" text="Rotatievloeiendheid" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="Rotatielimiet" />
+    <text name="settingDescription_maxRotationAngle" text="Max hoek" />
+
+    <text name="settingTitle_reverseFlip" text="Achteruitdraai" />
+    <text name="settingDescription_reverseFlip" text="Draaien bij achteruitrijden" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Camerarotatie In/Uitschakelen" />
+
+  </texts>
+</l10n>
+

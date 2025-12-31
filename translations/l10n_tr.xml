@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Kamera Dönüşü" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Kamera Dönüşü Etkin" />
+    <text name="settingDescription_cameraRotationEnabled" text="Dönüşü etkinleştir" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Üçüncü Kişi Dönüşü" />
+    <text name="settingDescription_thirdPersonRotation" text="Harici kameralar için etkinleştir" />
+
+    <text name="settingTitle_rotationSpeed" text="Dönüş Hızı" />
+    <text name="settingDescription_rotationSpeed" text="Dönüş hızı" />
+
+    <text name="settingTitle_rotationDelay" text="Dönüş Gecikmesi" />
+    <text name="settingDescription_rotationDelay" text="Dönüş yumuşatma" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="Dönüş Limiti" />
+    <text name="settingDescription_maxRotationAngle" text="Max açı" />
+
+    <text name="settingTitle_reverseFlip" text="Geri Vites Çevirme" />
+    <text name="settingDescription_reverseFlip" text="Geri vitese çevir" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Kamera Dönüşünü Aç/Kapat" />
+
+  </texts>
+</l10n>
+

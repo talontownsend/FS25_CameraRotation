@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Kamerarotation" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Kamerarotation aktiviert" />
+    <text name="settingDescription_cameraRotationEnabled" text="Kamerarotation aktivieren" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Außenkamera-Rotation" />
+    <text name="settingDescription_thirdPersonRotation" text="Für Außenkameras aktivieren" />
+
+    <text name="settingTitle_rotationSpeed" text="Rotationsgeschwindigkeit" />
+    <text name="settingDescription_rotationSpeed" text="Linearer Koeffizient zum Lenkwinkel" />
+
+    <text name="settingTitle_rotationDelay" text="Rotationsverzögerung" />
+    <text name="settingDescription_rotationDelay" text="Federarm-Reaktionszeit" />
+
+    <text name="settingTitle_maxRotationAngle" text="Rotationsgrenze" />
+    <text name="settingDescription_maxRotationAngle" text="Max. Rotationswinkel" />
+
+    <text name="settingTitle_reverseFlip" text="Rückwärts-Drehung" />
+    <text name="settingDescription_reverseFlip" text="Kamera beim Rückwärtsfahren drehen" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Kamerarotation umschalten" />
+
+  </texts>
+</l10n>
+

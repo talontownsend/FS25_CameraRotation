@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="105">
+  <title>
+    <en>Camera Rotation</en>
+    <de>Kamerarotation</de>
+    <fr>Rotation De La Caméra</fr>
+  </title>
+  <version>1.0.0.0</version>
+  <author>uprior</author>
+
+  <description>
+    <en><![CDATA[Automatically rotates the vehicle camera based on steering angle and flips it when reversing. This allows you to always look in the direction you are driving.
+
+Features:
+- Camera rotation follows steering angle
+- Automatic 180° flip when reversing
+- Works with both inside and outside cameras
+- Fully customizable rotation behavior
+- Quick toggle keybind
+
+Settings:
+- Camera Rotation Enabled: Enable/disable the mod
+- Third Person Rotation: Enable rotation for outside cameras
+- Rotation Speed: Linear coefficient to steering angle
+- Rotation Delay: Spring arm response time
+- Rotation Limit: Max rotation angle from forward vector
+- Reverse Flip: Flip camera when reversing
+
+All settings are accessible from the vanilla Settings menu. Use the keybind to quickly toggle the mod on/off.
+]]></en>
+    <fr><![CDATA[Fait tourner automatiquement la caméra du véhicule en fonction de l'angle de braquage et la retourne lors de la marche arrière. Cela vous permet de toujours regarder dans la direction où vous conduisez.
+
+Fonctionnalités:
+- La rotation de la caméra suit l'angle de braquage
+- Retournement automatique de 180° en marche arrière
+- Fonctionne avec les caméras intérieures et extérieures
+- Comportement de rotation entièrement personnalisable
+- Raccourci clavier pour activation/désactivation rapide
+
+Paramètres:
+- Rotation de la Caméra Activée: Activer/désactiver le mod
+- Rotation Caméra Extérieure: Activer la rotation pour les caméras extérieures
+- Vitesse de Rotation: Coefficient linéaire de l'angle de braquage
+- Délai de Rotation: Temps de réponse du bras à ressort
+- Limite de Rotation: Angle de rotation maximum depuis le vecteur avant
+- Retournement en Marche Arrière: Retourner la caméra en marche arrière
+
+Tous les paramètres sont accessibles depuis le menu Paramètres standard. Utilisez le raccourci clavier pour activer/désactiver rapidement le mod.
+]]></fr>
+    <de><![CDATA[Dreht die Fahrzeugkamera automatisch basierend auf dem Lenkwinkel und dreht sie beim Rückwärtsfahren um 180°. So schauen Sie immer in die Richtung, in die Sie fahren.
+
+Funktionen:
+- Kamerarotation folgt dem Lenkwinkel
+- Automatische 180°-Drehung beim Rückwärtsfahren
+- Funktioniert mit Innen- und Außenkameras
+- Vollständig anpassbares Rotationsverhalten
+- Schnellumschaltung per Tastenkürzel
+
+Einstellungen:
+- Kamerarotation aktiviert: Mod ein/ausschalten
+- Außenkamera-Rotation: Rotation für Außenkameras aktivieren
+- Rotationsgeschwindigkeit: Linearer Koeffizient zum Lenkwinkel
+- Rotationsverzögerung: Federarm-Reaktionszeit
+- Rotationsgrenze: Max. Rotationswinkel vom Vorwärtsvektor
+- Rückwärts-Drehung: Kamera beim Rückwärtsfahren drehen
+
+Alle Einstellungen sind über das Standard-Einstellungsmenü zugänglich. Verwenden Sie die Tastenkombination, um den Mod schnell ein- und auszuschalten.
+]]></de>
+  </description>
+
+  <iconFilename>icon_CameraRotation.dds</iconFilename>
+  <multiplayer supported="true"/>
+
+  <extraSourceFiles>
+    <sourceFile filename="src/CameraRotation.lua" />
+  </extraSourceFiles>
+
+  <l10n filenamePrefix="translations/l10n" />
+
+  <actions>
+    <action name="CAMERA_ROTATION_TOGGLE" category="VEHICLE" />
+  </actions>
+
+  <inputBinding>
+    <actionBinding action="CAMERA_ROTATION_TOGGLE">
+      <binding device="KB_MOUSE_DEFAULT" input="KEY_KP_PERIOD" />
+    </actionBinding>
+  </inputBinding>
+
+</modDesc>
+

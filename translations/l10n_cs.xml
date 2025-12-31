@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Rotace kamery" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Rotace kamery zapnuta" />
+    <text name="settingDescription_cameraRotationEnabled" text="Povolit rotaci" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Rotace kamery třetí osoby" />
+    <text name="settingDescription_thirdPersonRotation" text="Povolit pro vnější kamery" />
+
+    <text name="settingTitle_rotationSpeed" text="Rychlost rotace" />
+    <text name="settingDescription_rotationSpeed" text="Rychlost otáčení" />
+
+    <text name="settingTitle_rotationDelay" text="Zpoždění rotace" />
+    <text name="settingDescription_rotationDelay" text="Vyhlazení rotace" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="Limit rotace" />
+    <text name="settingDescription_maxRotationAngle" text="Max úhel" />
+
+    <text name="settingTitle_reverseFlip" text="Otočení při couvání" />
+    <text name="settingDescription_reverseFlip" text="Otočit při couvání" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Přepnout rotaci kamery" />
+
+  </texts>
+</l10n>
+

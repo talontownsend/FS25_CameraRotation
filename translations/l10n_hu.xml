@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Kamera forgatás" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Kamera forgatás bekapcsolva" />
+    <text name="settingDescription_cameraRotationEnabled" text="Forgatás engedélyezése" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Harmadik Személy Forgatás" />
+    <text name="settingDescription_thirdPersonRotation" text="Engedélyezés külső kamerákhoz" />
+
+    <text name="settingTitle_rotationSpeed" text="Forgatási sebesség" />
+    <text name="settingDescription_rotationSpeed" text="Forgatási sebesség" />
+
+    <text name="settingTitle_rotationDelay" text="Forgatási késleltetés" />
+    <text name="settingDescription_rotationDelay" text="Forgatás simítás" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="Forgatási korlát" />
+    <text name="settingDescription_maxRotationAngle" text="Max szög" />
+
+    <text name="settingTitle_reverseFlip" text="Hátramenet forgatás" />
+    <text name="settingDescription_reverseFlip" text="Forgatás hátramenetben" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Kamera Forgatás Ki/Bekapcsolása" />
+
+  </texts>
+</l10n>
+

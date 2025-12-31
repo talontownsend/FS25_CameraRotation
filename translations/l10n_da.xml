@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Kamerarotation" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Kamerarotation aktiveret" />
+    <text name="settingDescription_cameraRotationEnabled" text="Aktivér rotation" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Tredjeperson Rotation" />
+    <text name="settingDescription_thirdPersonRotation" text="Aktivér for eksterne kameraer" />
+
+    <text name="settingTitle_rotationSpeed" text="Rotationshastighed" />
+    <text name="settingDescription_rotationSpeed" text="Rotationshastighed" />
+
+    <text name="settingTitle_rotationDelay" text="Rotationsforsinkelse" />
+    <text name="settingDescription_rotationDelay" text="Rotationsudjævning" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="Rotationsgrænse" />
+    <text name="settingDescription_maxRotationAngle" text="Max vinkel" />
+
+    <text name="settingTitle_reverseFlip" text="Omvendt flip" />
+    <text name="settingDescription_reverseFlip" text="Vende ved bakkørsel" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Skift Kamerarotation" />
+
+  </texts>
+</l10n>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <texts>
+    <text name="ui_cameraRotationSettingsTitle" text="Rotația Camerei" />
+    
+    <text name="settingTitle_cameraRotationEnabled" text="Rotația Camerei Activată" />
+    <text name="settingDescription_cameraRotationEnabled" text="Activează rotația" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Rotație la Persoana a Treia" />
+    <text name="settingDescription_thirdPersonRotation" text="Activează pentru camere externe" />
+
+    <text name="settingTitle_rotationSpeed" text="Viteza de Rotație" />
+    <text name="settingDescription_rotationSpeed" text="Viteza de rotație" />
+
+    <text name="settingTitle_rotationDelay" text="Întârzierea Rotației" />
+    <text name="settingDescription_rotationDelay" text="Netezire rotație" />
+
+
+    <text name="settingTitle_maxRotationAngle" text="Limita Rotației" />
+    <text name="settingDescription_maxRotationAngle" text="Unghi maxim" />
+
+    <text name="settingTitle_reverseFlip" text="Răsturnare la Mersul înapoi" />
+    <text name="settingDescription_reverseFlip" text="Răsturna la mersul înapoi" />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Comută Rotația Camerei" />
+
+  </texts>
+</l10n>
+
