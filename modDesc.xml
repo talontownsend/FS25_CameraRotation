@@ -1,70 +1,79 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="105">
   <title>
-    <en>Camera Rotation</en>
-    <de>Kamerarotation</de>
-    <fr>Rotation De La Caméra</fr>
+    <en>Trailing Camera</en>
+    <de>Nachlaufkamera</de>
+    <fr>Caméra suiveuse</fr>
   </title>
-  <version>1.0.0.0</version>
-  <author>uprior</author>
+  <version>2.0.1.0</version>
+  <author>uprior (Trailing Camera fork by talontownsend)</author>
 
   <description>
-    <en><![CDATA[Automatically rotates the vehicle camera based on steering angle and flips it when reversing. This allows you to always look in the direction you are driving.
+    <en><![CDATA[A trailing chase camera for vehicles. The camera smoothly follows the direction the vehicle is actually heading and lags behind through turns, then settles back behind you - like the chase cameras in GTA V or Forza Horizon. It reacts to the chassis heading, not the steering-wheel angle, so it never swings while stationary.
 
 Features:
-- Camera rotation follows steering angle
-- Automatic 180° flip when reversing
+- Camera trails the vehicle's real heading with spring damping
+- Lags into turns and eases back to centre on the straights
+- Fades in with speed (no swinging while parking or pivoting)
+- Automatic 180° flip when reversing (optional)
 - Works with both inside and outside cameras
-- Fully customizable rotation behavior
 - Quick toggle keybind
 
 Settings:
-- Camera Rotation Enabled: Enable/disable the mod
-- Third Person Rotation: Enable rotation for outside cameras
-- Rotation Speed: Linear coefficient to steering angle
-- Rotation Delay: Spring arm response time
-- Rotation Limit: Max rotation angle from forward vector
-- Reverse Flip: Flip camera when reversing
+- Enable Trailing Camera: Enable/disable the mod
+- Trail Outside Camera: Enable trailing for outside cameras
+- Swing Amount: How strongly the camera trails your heading
+- Return Smoothness: How slowly the camera settles back behind you
+- Swing Limit: Limit how far the camera swings out
+- Flip When Reversing: Flip camera when reversing
 
 All settings are accessible from the vanilla Settings menu. Use the keybind to quickly toggle the mod on/off.
+
+Continues the abandoned "Camera Rotation" mod by uprior under GPL-3.0.
 ]]></en>
-    <fr><![CDATA[Fait tourner automatiquement la caméra du véhicule en fonction de l'angle de braquage et la retourne lors de la marche arrière. Cela vous permet de toujours regarder dans la direction où vous conduisez.
+    <fr><![CDATA[Une caméra suiveuse pour les véhicules. La caméra suit la direction réelle du véhicule, reste en retrait dans les virages, puis revient doucement se placer derrière vous - comme les caméras de poursuite de GTA V ou Forza Horizon. Elle réagit à la direction du châssis et non à l'angle de braquage : elle ne pivote donc jamais à l'arrêt.
 
 Fonctionnalités:
-- La rotation de la caméra suit l'angle de braquage
-- Retournement automatique de 180° en marche arrière
+- La caméra suit la direction réelle du véhicule avec un amortissement à ressort
+- Reste en retrait dans les virages et se recentre en ligne droite
+- S'active progressivement avec la vitesse (aucun balancement lors des manoeuvres)
+- Rotation automatique de 180° en marche arrière (optionnel)
 - Fonctionne avec les caméras intérieures et extérieures
-- Comportement de rotation entièrement personnalisable
 - Raccourci clavier pour activation/désactivation rapide
 
 Paramètres:
-- Rotation de la Caméra Activée: Activer/désactiver le mod
-- Rotation Caméra Extérieure: Activer la rotation pour les caméras extérieures
-- Vitesse de Rotation: Coefficient linéaire de l'angle de braquage
-- Délai de Rotation: Temps de réponse du bras à ressort
-- Limite de Rotation: Angle de rotation maximum depuis le vecteur avant
-- Retournement en Marche Arrière: Retourner la caméra en marche arrière
+- Activer caméra suiveuse: Activer/désactiver le mod
+- Suivi caméra extérieure: Activer le suivi pour les caméras extérieures
+- Force du balancement: Intensité avec laquelle la caméra suit votre direction
+- Douceur du retour: Lenteur avec laquelle la caméra revient derrière vous
+- Limite de balancement: Limite jusqu'où la caméra se décale sur le côté
+- Pivoter en marche arrière: Pivote la caméra en marche arrière
 
 Tous les paramètres sont accessibles depuis le menu Paramètres standard. Utilisez le raccourci clavier pour activer/désactiver rapidement le mod.
+
+Poursuit le mod « Camera Rotation » de uprior, abandonné, sous licence GPL-3.0.
 ]]></fr>
-    <de><![CDATA[Dreht die Fahrzeugkamera automatisch basierend auf dem Lenkwinkel und dreht sie beim Rückwärtsfahren um 180°. So schauen Sie immer in die Richtung, in die Sie fahren.
+    <de><![CDATA[Eine nachlaufende Verfolgerkamera für Fahrzeuge. Die Kamera folgt verzögert der tatsächlichen Fahrtrichtung, bleibt in Kurven zurück und pendelt sich danach sanft wieder hinter dem Fahrzeug ein - wie die Verfolgerkameras in GTA V oder Forza Horizon. Sie reagiert auf die Fahrtrichtung des Fahrzeugs und nicht auf den Lenkwinkel und schwenkt daher im Stand niemals.
 
 Funktionen:
-- Kamerarotation folgt dem Lenkwinkel
-- Automatische 180°-Drehung beim Rückwärtsfahren
+- Kamera läuft der echten Fahrtrichtung mit Federdämpfung nach
+- Bleibt in Kurven zurück und zentriert sich auf Geraden wieder
+- Blendet sich mit der Geschwindigkeit ein (kein Schwenken beim Rangieren)
+- Automatische 180°-Drehung beim Rückwärtsfahren (optional)
 - Funktioniert mit Innen- und Außenkameras
-- Vollständig anpassbares Rotationsverhalten
 - Schnellumschaltung per Tastenkürzel
 
 Einstellungen:
-- Kamerarotation aktiviert: Mod ein/ausschalten
-- Außenkamera-Rotation: Rotation für Außenkameras aktivieren
-- Rotationsgeschwindigkeit: Linearer Koeffizient zum Lenkwinkel
-- Rotationsverzögerung: Federarm-Reaktionszeit
-- Rotationsgrenze: Max. Rotationswinkel vom Vorwärtsvektor
-- Rückwärts-Drehung: Kamera beim Rückwärtsfahren drehen
+- Nachlaufkamera aktiv: Mod ein/ausschalten
+- Außenkamera nachlaufen: Nachlauf für Außenkameras aktivieren
+- Schwenkstärke: Wie stark die Kamera der Fahrtrichtung nachläuft
+- Rücklaufdämpfung: Wie sanft die Kamera wieder hinter das Fahrzeug zurückkehrt
+- Schwenkgrenze: Begrenzt, wie weit die Kamera ausschwenkt
+- Rückwärts umdrehen: Dreht die Kamera beim Rückwärtsfahren
 
 Alle Einstellungen sind über das Standard-Einstellungsmenü zugänglich. Verwenden Sie die Tastenkombination, um den Mod schnell ein- und auszuschalten.
+
+Führt den eingestellten Mod „Camera Rotation“ von uprior unter GPL-3.0 fort.
 ]]></de>
   </description>
 

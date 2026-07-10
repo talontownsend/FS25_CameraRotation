@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Поворот камеры" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Поворот камеры включен" />
-    <text name="settingDescription_cameraRotationEnabled" text="Включить поворот" />
+    <text name="ui_cameraRotationSettingsTitle" text="Следящая камера" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Поворот камеры от третьего лица" />
+    <text name="settingTitle_cameraRotationEnabled" text="Включить следящую камеру" />
+    <text name="settingDescription_cameraRotationEnabled" text="Камера следует за направлением движения" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Слежение внешней камеры" />
     <text name="settingDescription_thirdPersonRotation" text="Включить для внешних камер" />
 
-    <text name="settingTitle_rotationSpeed" text="Скорость поворота" />
-    <text name="settingDescription_rotationSpeed" text="Скорость поворота" />
+    <text name="settingTitle_rotationSpeed" text="Сила отклонения" />
+    <text name="settingDescription_rotationSpeed" text="Насколько сильно камера отклоняется от курса" />
 
-    <text name="settingTitle_rotationDelay" text="Задержка поворота" />
-    <text name="settingDescription_rotationDelay" text="Сглаживание поворота" />
+    <text name="settingTitle_rotationDelay" text="Плавность возврата" />
+    <text name="settingDescription_rotationDelay" text="Насколько плавно камера возвращается за машину" />
 
+    <text name="settingTitle_maxRotationAngle" text="Предел отклонения" />
+    <text name="settingDescription_maxRotationAngle" text="Ограничить максимальное отклонение камеры" />
 
-    <text name="settingTitle_maxRotationAngle" text="Предел поворота" />
-    <text name="settingDescription_maxRotationAngle" text="Макс угол" />
+    <text name="settingTitle_reverseFlip" text="Разворот при заднем ходе" />
+    <text name="settingDescription_reverseFlip" text="Разворачивать камеру при движении задним ходом" />
 
-    <text name="settingTitle_reverseFlip" text="Переворот при заднем ходе" />
-    <text name="settingDescription_reverseFlip" text="Переворачивать при заднем ходе" />
-
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Переключить поворот камеры" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Переключить следящую камеру" />
 
   </texts>
 </l10n>
-

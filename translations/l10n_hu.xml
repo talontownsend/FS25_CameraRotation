@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Kamera forgatás" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Kamera forgatás bekapcsolva" />
-    <text name="settingDescription_cameraRotationEnabled" text="Forgatás engedélyezése" />
+    <text name="ui_cameraRotationSettingsTitle" text="Követő kamera" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Harmadik Személy Forgatás" />
-    <text name="settingDescription_thirdPersonRotation" text="Engedélyezés külső kamerákhoz" />
+    <text name="settingTitle_cameraRotationEnabled" text="Követő kamera be" />
+    <text name="settingDescription_cameraRotationEnabled" text="A kamera követi a haladási irányt." />
 
-    <text name="settingTitle_rotationSpeed" text="Forgatási sebesség" />
-    <text name="settingDescription_rotationSpeed" text="Forgatási sebesség" />
+    <text name="settingTitle_thirdPersonRotation" text="Külső kameránál is" />
+    <text name="settingDescription_thirdPersonRotation" text="Bekapcsolás a külső kamerákhoz." />
 
-    <text name="settingTitle_rotationDelay" text="Forgatási késleltetés" />
-    <text name="settingDescription_rotationDelay" text="Forgatás simítás" />
+    <text name="settingTitle_rotationSpeed" text="Kilengés mértéke" />
+    <text name="settingDescription_rotationSpeed" text="Mennyire erősen követi a kamera az irányt." />
 
+    <text name="settingTitle_rotationDelay" text="Visszaállás lágysága" />
+    <text name="settingDescription_rotationDelay" text="Milyen lassan áll vissza a kamera mögéd." />
 
-    <text name="settingTitle_maxRotationAngle" text="Forgatási korlát" />
-    <text name="settingDescription_maxRotationAngle" text="Max szög" />
+    <text name="settingTitle_maxRotationAngle" text="Kilengés határa" />
+    <text name="settingDescription_maxRotationAngle" text="Korlátozza a kamera maximális kilengését." />
 
-    <text name="settingTitle_reverseFlip" text="Hátramenet forgatás" />
-    <text name="settingDescription_reverseFlip" text="Forgatás hátramenetben" />
+    <text name="settingTitle_reverseFlip" text="Fordítás tolatáskor" />
+    <text name="settingDescription_reverseFlip" text="A kamera átfordítása tolatáskor." />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Kamera Forgatás Ki/Bekapcsolása" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Követő kamera ki/be" />
 
   </texts>
 </l10n>
-

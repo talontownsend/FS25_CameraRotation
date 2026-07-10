@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Obrót Kamery" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Obrót Kamery Włączony" />
-    <text name="settingDescription_cameraRotationEnabled" text="Włącz obrót" />
+    <text name="ui_cameraRotationSettingsTitle" text="Kamera podążająca" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Obrót Kamery Trzeciej Osoby" />
-    <text name="settingDescription_thirdPersonRotation" text="Włącz dla kamer zewnętrznych" />
+    <text name="settingTitle_cameraRotationEnabled" text="Włącz kamerę podążającą" />
+    <text name="settingDescription_cameraRotationEnabled" text="Kamera podąża za kierunkiem jazdy" />
 
-    <text name="settingTitle_rotationSpeed" text="Prędkość Obrotu" />
-    <text name="settingDescription_rotationSpeed" text="Prędkość obrotu" />
+    <text name="settingTitle_thirdPersonRotation" text="Podążanie z zewnątrz" />
+    <text name="settingDescription_thirdPersonRotation" text="Włącza dla kamer zewnętrznych" />
 
-    <text name="settingTitle_rotationDelay" text="Opóźnienie Obrotu" />
-    <text name="settingDescription_rotationDelay" text="Wygładzanie obrotu" />
+    <text name="settingTitle_rotationSpeed" text="Siła odchylenia" />
+    <text name="settingDescription_rotationSpeed" text="Jak mocno kamera podąża za kierunkiem jazdy" />
 
+    <text name="settingTitle_rotationDelay" text="Płynność powrotu" />
+    <text name="settingDescription_rotationDelay" text="Jak wolno kamera wraca za pojazd" />
 
-    <text name="settingTitle_maxRotationAngle" text="Limit Obrotu" />
-    <text name="settingDescription_maxRotationAngle" text="Max kąt" />
+    <text name="settingTitle_maxRotationAngle" text="Limit odchylenia" />
+    <text name="settingDescription_maxRotationAngle" text="Ogranicza maksymalne odchylenie kamery" />
 
-    <text name="settingTitle_reverseFlip" text="Odwrócenie przy Cofaniu" />
-    <text name="settingDescription_reverseFlip" text="Odwracać przy cofaniu" />
+    <text name="settingTitle_reverseFlip" text="Obrót przy cofaniu" />
+    <text name="settingDescription_reverseFlip" text="Obraca kamerę podczas cofania" />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Przełącz Obrót Kamery" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Przełącz kamerę podążającą" />
 
   </texts>
 </l10n>
-

@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Rotación de Cámara" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Rotación de Cámara Activada" />
-    <text name="settingDescription_cameraRotationEnabled" text="Activar rotación" />
+    <text name="ui_cameraRotationSettingsTitle" text="Cámara con inercia" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Rotación en Tercera Persona" />
-    <text name="settingDescription_thirdPersonRotation" text="Activar para cámaras externas" />
+    <text name="settingTitle_cameraRotationEnabled" text="Activar cámara con inercia" />
+    <text name="settingDescription_cameraRotationEnabled" text="La cámara sigue con inercia la dirección en la que manejas." />
 
-    <text name="settingTitle_rotationSpeed" text="Velocidad de Rotación" />
-    <text name="settingDescription_rotationSpeed" text="Velocidad de rotación" />
+    <text name="settingTitle_thirdPersonRotation" text="Inercia en cámara exterior" />
+    <text name="settingDescription_thirdPersonRotation" text="Activa la inercia en las cámaras exteriores." />
 
-    <text name="settingTitle_rotationDelay" text="Retraso de Rotación" />
-    <text name="settingDescription_rotationDelay" text="Suavizado de rotación" />
+    <text name="settingTitle_rotationSpeed" text="Intensidad del balanceo" />
+    <text name="settingDescription_rotationSpeed" text="Qué tanto la cámara sigue tu dirección de avance." />
 
+    <text name="settingTitle_rotationDelay" text="Suavidad de retorno" />
+    <text name="settingDescription_rotationDelay" text="Qué tan lento la cámara vuelve a centrarse detrás de ti." />
 
-    <text name="settingTitle_maxRotationAngle" text="Límite de Rotación" />
-    <text name="settingDescription_maxRotationAngle" text="Ángulo máximo" />
+    <text name="settingTitle_maxRotationAngle" text="Límite de balanceo" />
+    <text name="settingDescription_maxRotationAngle" text="Limita cuánto se balancea la cámara hacia los lados." />
 
-    <text name="settingTitle_reverseFlip" text="Volteo al Reversa" />
-    <text name="settingDescription_reverseFlip" text="Voltear al reversa" />
+    <text name="settingTitle_reverseFlip" text="Girar en reversa" />
+    <text name="settingDescription_reverseFlip" text="Gira la cámara 180° al ir en reversa." />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Alternar Rotación de Cámara" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Alternar cámara con inercia" />
 
   </texts>
 </l10n>
-

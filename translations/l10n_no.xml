@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Kamerarotasjon" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Kamerarotasjon Aktivert" />
-    <text name="settingDescription_cameraRotationEnabled" text="Aktiver rotasjon" />
+    <text name="ui_cameraRotationSettingsTitle" text="Følgekamera" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Tredjeperson Rotasjon" />
-    <text name="settingDescription_thirdPersonRotation" text="Aktiver for eksterne kameraer" />
+    <text name="settingTitle_cameraRotationEnabled" text="Slå på følgekamera" />
+    <text name="settingDescription_cameraRotationEnabled" text="Kameraet følger kjøreretningen din" />
 
-    <text name="settingTitle_rotationSpeed" text="Rotasjonshastighet" />
-    <text name="settingDescription_rotationSpeed" text="Rotasjonshastighet" />
+    <text name="settingTitle_thirdPersonRotation" text="Bruk på utvendig kamera" />
+    <text name="settingDescription_thirdPersonRotation" text="Slå på for utvendige kameraer" />
 
-    <text name="settingTitle_rotationDelay" text="Rotasjonsforsinkelse" />
-    <text name="settingDescription_rotationDelay" text="Rotasjonsutjevning" />
+    <text name="settingTitle_rotationSpeed" text="Svaimengde" />
+    <text name="settingDescription_rotationSpeed" text="Hvor sterkt kameraet følger retningen din" />
 
+    <text name="settingTitle_rotationDelay" text="Myk retur" />
+    <text name="settingDescription_rotationDelay" text="Hvor sakte kameraet legger seg tilbake bak deg" />
 
-    <text name="settingTitle_maxRotationAngle" text="Rotasjonsgrense" />
-    <text name="settingDescription_maxRotationAngle" text="Max vinkel" />
+    <text name="settingTitle_maxRotationAngle" text="Svaigrense" />
+    <text name="settingDescription_maxRotationAngle" text="Begrens hvor langt kameraet svaier ut" />
 
-    <text name="settingTitle_reverseFlip" text="Omvendt flip" />
-    <text name="settingDescription_reverseFlip" text="Vende ved bakkjøring" />
+    <text name="settingTitle_reverseFlip" text="Snu ved rygging" />
+    <text name="settingDescription_reverseFlip" text="Snu kameraet når du rygger" />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Bytt Kamerarotasjon" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Slå av/på følgekamera" />
 
   </texts>
 </l10n>
-

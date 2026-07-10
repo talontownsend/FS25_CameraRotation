@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Camerarotatie" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Camerarotatie Ingeschakeld" />
-    <text name="settingDescription_cameraRotationEnabled" text="Rotatie inschakelen" />
+    <text name="ui_cameraRotationSettingsTitle" text="Volgcamera" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Derde Persoon Rotatie" />
-    <text name="settingDescription_thirdPersonRotation" text="Inschakelen voor externe camera's" />
+    <text name="settingTitle_cameraRotationEnabled" text="Volgcamera inschakelen" />
+    <text name="settingDescription_cameraRotationEnabled" text="Camera volgt de richting waarin je rijdt" />
 
-    <text name="settingTitle_rotationSpeed" text="Rotatiesnelheid" />
-    <text name="settingDescription_rotationSpeed" text="Rotatiesnelheid" />
+    <text name="settingTitle_thirdPersonRotation" text="Buitencamera volgen" />
+    <text name="settingDescription_thirdPersonRotation" text="Inschakelen voor buitencamera's" />
 
-    <text name="settingTitle_rotationDelay" text="Rotatievertraging" />
-    <text name="settingDescription_rotationDelay" text="Rotatievloeiendheid" />
+    <text name="settingTitle_rotationSpeed" text="Uitzwaai" />
+    <text name="settingDescription_rotationSpeed" text="Hoe sterk de camera je rijrichting volgt" />
 
+    <text name="settingTitle_rotationDelay" text="Vloeiende terugkeer" />
+    <text name="settingDescription_rotationDelay" text="Hoe traag de camera weer achter je tot rust komt" />
 
-    <text name="settingTitle_maxRotationAngle" text="Rotatielimiet" />
-    <text name="settingDescription_maxRotationAngle" text="Max hoek" />
+    <text name="settingTitle_maxRotationAngle" text="Max. uitzwaai" />
+    <text name="settingDescription_maxRotationAngle" text="Begrens hoe ver de camera uitzwaait" />
 
-    <text name="settingTitle_reverseFlip" text="Achteruitdraai" />
-    <text name="settingDescription_reverseFlip" text="Draaien bij achteruitrijden" />
+    <text name="settingTitle_reverseFlip" text="Omdraaien bij achteruit" />
+    <text name="settingDescription_reverseFlip" text="Camera omdraaien bij achteruitrijden" />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Camerarotatie In/Uitschakelen" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Volgcamera aan/uit" />
 
   </texts>
 </l10n>
-

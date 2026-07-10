@@ -5,9 +5,9 @@ CameraRotationSettings = {}
 
 CameraRotationSettings.isEnabled = true
 CameraRotationSettings.thirdPersonRotation = true
-CameraRotationSettings.rotationSpeed = 0.25
-CameraRotationSettings.rotationDelay = 0.01
-CameraRotationSettings.maxRotationAngle = 0.25
+CameraRotationSettings.rotationSpeed = 0.7      -- reused: trail intensity (how strongly the cam trails)
+CameraRotationSettings.rotationDelay = 0.25     -- reused: catch-up time constant in seconds (higher = more lag)
+CameraRotationSettings.maxRotationAngle = 0.4   -- max trail angle from centre (radians)
 CameraRotationSettings.reverseFlip = true
 
 CameraRotationSettings.settingsDone = false
@@ -52,7 +52,7 @@ function CameraRotationSettings:load()
 
   local rotDelay = getXMLFloat(xmlFile, "cameraRotation.rotationDelay#value")
   if rotDelay ~= nil then
-    self.rotationDelay = math.max(0.001, math.min(0.1, rotDelay))
+    self.rotationDelay = math.max(0.02, math.min(1.0, rotDelay))
   end
 
   local maxRotAngle = getXMLFloat(xmlFile, "cameraRotation.maxRotationAngle#value")
@@ -102,7 +102,7 @@ function CameraRotationSettings:setRotationSpeed(value)
 end
 
 function CameraRotationSettings:setRotationDelay(value)
-  self.rotationDelay = math.max(0.001, math.min(0.1, value))
+  self.rotationDelay = math.max(0.02, math.min(1.0, value))
   self:save()
 end
 
@@ -201,25 +201,25 @@ end
 
 -- Preset values for rotation speed
 CameraRotationSettings.rotationSpeedTexts = {
-  "Super Slow",
-  "Slower",
+  "Subtle",
+  "Light",
   "Normal",
-  "Faster",
-  "Super Fast",
-  "Extreme",
-  "Maximum"
+  "Strong",
+  "Heavy",
+  "Full",
+  "Exaggerated"
 }
-CameraRotationSettings.rotationSpeedValues = {0.1, 0.15, 0.25, 0.4, 0.6, 1.0, 1.5}
+CameraRotationSettings.rotationSpeedValues = {0.25, 0.4, 0.55, 0.7, 0.85, 1.0, 1.2}
 
 CameraRotationSettings.rotationDelayTexts = {
-  "Instant",
-  "Fast",
+  "Snappy",
+  "Quick",
   "Normal",
-  "Smooth",
-  "Very Smooth",
+  "Relaxed",
+  "Floaty",
   "Maximum"
 }
-CameraRotationSettings.rotationDelayValues = {0.001, 0.003, 0.01, 0.02, 0.05, 0.1}
+CameraRotationSettings.rotationDelayValues = {0.08, 0.15, 0.25, 0.4, 0.6, 0.9}
 
 CameraRotationSettings.maxRotationAngleTexts = {
   "Small",

@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Vrtenje kamere" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Vrtenje kamere omogočeno" />
-    <text name="settingDescription_cameraRotationEnabled" text="Omogoči vrtenje" />
+    <text name="ui_cameraRotationSettingsTitle" text="Sledilna kamera" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Vrtenje Tretje Osebe" />
+    <text name="settingTitle_cameraRotationEnabled" text="Omogoči sledilno kamero" />
+    <text name="settingDescription_cameraRotationEnabled" text="Kamera sledi smeri vožnje" />
+
+    <text name="settingTitle_thirdPersonRotation" text="Sledenje zunanje kamere" />
     <text name="settingDescription_thirdPersonRotation" text="Omogoči za zunanje kamere" />
 
-    <text name="settingTitle_rotationSpeed" text="Hitrost vrtenja" />
-    <text name="settingDescription_rotationSpeed" text="Hitrost vrtenja" />
+    <text name="settingTitle_rotationSpeed" text="Moč zasuka" />
+    <text name="settingDescription_rotationSpeed" text="Kako močno kamera sledi smeri vožnje" />
 
-    <text name="settingTitle_rotationDelay" text="Zakasnitev vrtenja" />
-    <text name="settingDescription_rotationDelay" text="Glajenje vrtenja" />
+    <text name="settingTitle_rotationDelay" text="Mehkoba vračanja" />
+    <text name="settingDescription_rotationDelay" text="Kako počasi se kamera vrne za vozilo" />
 
+    <text name="settingTitle_maxRotationAngle" text="Omejitev zasuka" />
+    <text name="settingDescription_maxRotationAngle" text="Omeji, koliko se kamera zasuka" />
 
-    <text name="settingTitle_maxRotationAngle" text="Omejitev vrtenja" />
-    <text name="settingDescription_maxRotationAngle" text="Max kot" />
+    <text name="settingTitle_reverseFlip" text="Obrni pri vzvratni vožnji" />
+    <text name="settingDescription_reverseFlip" text="Obrni kamero pri vzvratni vožnji" />
 
-    <text name="settingTitle_reverseFlip" text="Obrat pri vožnji nazaj" />
-    <text name="settingDescription_reverseFlip" text="Obrat pri vožnji nazaj" />
-
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Preklopi Vrtenje Kamere" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Preklopi sledilno kamero" />
 
   </texts>
 </l10n>
-

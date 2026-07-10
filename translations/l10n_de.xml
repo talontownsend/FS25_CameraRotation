@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Kamerarotation" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Kamerarotation aktiviert" />
-    <text name="settingDescription_cameraRotationEnabled" text="Kamerarotation aktivieren" />
+    <text name="ui_cameraRotationSettingsTitle" text="Nachlaufkamera" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Außenkamera-Rotation" />
-    <text name="settingDescription_thirdPersonRotation" text="Für Außenkameras aktivieren" />
+    <text name="settingTitle_cameraRotationEnabled" text="Nachlaufkamera aktiv" />
+    <text name="settingDescription_cameraRotationEnabled" text="Die Kamera folgt verzögert der Fahrtrichtung." />
 
-    <text name="settingTitle_rotationSpeed" text="Rotationsgeschwindigkeit" />
-    <text name="settingDescription_rotationSpeed" text="Linearer Koeffizient zum Lenkwinkel" />
+    <text name="settingTitle_thirdPersonRotation" text="Außenkamera nachlaufen" />
+    <text name="settingDescription_thirdPersonRotation" text="Auch für Außenkameras aktivieren." />
 
-    <text name="settingTitle_rotationDelay" text="Rotationsverzögerung" />
-    <text name="settingDescription_rotationDelay" text="Federarm-Reaktionszeit" />
+    <text name="settingTitle_rotationSpeed" text="Schwenkstärke" />
+    <text name="settingDescription_rotationSpeed" text="Wie stark die Kamera der Fahrtrichtung nachläuft." />
 
-    <text name="settingTitle_maxRotationAngle" text="Rotationsgrenze" />
-    <text name="settingDescription_maxRotationAngle" text="Max. Rotationswinkel" />
+    <text name="settingTitle_rotationDelay" text="Rücklaufdämpfung" />
+    <text name="settingDescription_rotationDelay" text="Wie sanft die Kamera wieder hinter das Fahrzeug zurückkehrt." />
 
-    <text name="settingTitle_reverseFlip" text="Rückwärts-Drehung" />
-    <text name="settingDescription_reverseFlip" text="Kamera beim Rückwärtsfahren drehen" />
+    <text name="settingTitle_maxRotationAngle" text="Schwenkgrenze" />
+    <text name="settingDescription_maxRotationAngle" text="Begrenzt, wie weit die Kamera ausschwenkt." />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Kamerarotation umschalten" />
+    <text name="settingTitle_reverseFlip" text="Rückwärts umdrehen" />
+    <text name="settingDescription_reverseFlip" text="Dreht die Kamera beim Rückwärtsfahren um 180°." />
+
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Nachlaufkamera umschalten" />
 
   </texts>
 </l10n>
-

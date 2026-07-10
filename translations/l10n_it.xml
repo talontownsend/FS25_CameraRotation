@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Rotazione della Fotocamera" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Rotazione della Fotocamera Attivata" />
-    <text name="settingDescription_cameraRotationEnabled" text="Attiva rotazione" />
+    <text name="ui_cameraRotationSettingsTitle" text="Telecamera dinamica" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Rotazione in Terza Persona" />
-    <text name="settingDescription_thirdPersonRotation" text="Attiva per fotocamere esterne" />
+    <text name="settingTitle_cameraRotationEnabled" text="Attiva telecamera dinamica" />
+    <text name="settingDescription_cameraRotationEnabled" text="La telecamera segue la direzione di marcia" />
 
-    <text name="settingTitle_rotationSpeed" text="Velocità di Rotazione" />
-    <text name="settingDescription_rotationSpeed" text="Velocità di rotazione" />
+    <text name="settingTitle_thirdPersonRotation" text="Anche telecamere esterne" />
+    <text name="settingDescription_thirdPersonRotation" text="Attiva per le telecamere esterne" />
 
-    <text name="settingTitle_rotationDelay" text="Ritardo di Rotazione" />
-    <text name="settingDescription_rotationDelay" text="Levigatezza rotazione" />
+    <text name="settingTitle_rotationSpeed" text="Ampiezza oscillazione" />
+    <text name="settingDescription_rotationSpeed" text="Quanto la telecamera segue la tua direzione" />
 
+    <text name="settingTitle_rotationDelay" text="Morbidezza ritorno" />
+    <text name="settingDescription_rotationDelay" text="Quanto lentamente la telecamera torna dietro di te" />
 
-    <text name="settingTitle_maxRotationAngle" text="Limite di Rotazione" />
-    <text name="settingDescription_maxRotationAngle" text="Angolo massimo" />
+    <text name="settingTitle_maxRotationAngle" text="Limite oscillazione" />
+    <text name="settingDescription_maxRotationAngle" text="Limita quanto la telecamera oscilla di lato" />
 
-    <text name="settingTitle_reverseFlip" text="Capovolgimento in Retromarcia" />
-    <text name="settingDescription_reverseFlip" text="Capovolgere in retromarcia" />
+    <text name="settingTitle_reverseFlip" text="Ruota in retromarcia" />
+    <text name="settingDescription_reverseFlip" text="Ruota la telecamera in retromarcia" />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Attiva/Disattiva Rotazione Fotocamera" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Attiva/disattiva telecamera dinamica" />
 
   </texts>
 </l10n>
-

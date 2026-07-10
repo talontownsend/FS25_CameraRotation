@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Kamera Dönüşü" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Kamera Dönüşü Etkin" />
-    <text name="settingDescription_cameraRotationEnabled" text="Dönüşü etkinleştir" />
+    <text name="ui_cameraRotationSettingsTitle" text="Takip Kamerası" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Üçüncü Kişi Dönüşü" />
-    <text name="settingDescription_thirdPersonRotation" text="Harici kameralar için etkinleştir" />
+    <text name="settingTitle_cameraRotationEnabled" text="Takip Kamerasını Aç" />
+    <text name="settingDescription_cameraRotationEnabled" text="Kamera, sürdüğünüz yönü takip eder" />
 
-    <text name="settingTitle_rotationSpeed" text="Dönüş Hızı" />
-    <text name="settingDescription_rotationSpeed" text="Dönüş hızı" />
+    <text name="settingTitle_thirdPersonRotation" text="Dış Kamerada Takip" />
+    <text name="settingDescription_thirdPersonRotation" text="Dış kameralar için etkinleştirin" />
 
-    <text name="settingTitle_rotationDelay" text="Dönüş Gecikmesi" />
-    <text name="settingDescription_rotationDelay" text="Dönüş yumuşatma" />
+    <text name="settingTitle_rotationSpeed" text="Salınım Miktarı" />
+    <text name="settingDescription_rotationSpeed" text="Kameranın yönünüzü ne kadar güçlü takip edeceği" />
 
+    <text name="settingTitle_rotationDelay" text="Dönüş Yumuşaklığı" />
+    <text name="settingDescription_rotationDelay" text="Kameranın arkanıza ne kadar yavaş yerleşeceği" />
 
-    <text name="settingTitle_maxRotationAngle" text="Dönüş Limiti" />
-    <text name="settingDescription_maxRotationAngle" text="Max açı" />
+    <text name="settingTitle_maxRotationAngle" text="Salınım Sınırı" />
+    <text name="settingDescription_maxRotationAngle" text="Kameranın ne kadar salınacağını sınırlayın" />
 
-    <text name="settingTitle_reverseFlip" text="Geri Vites Çevirme" />
-    <text name="settingDescription_reverseFlip" text="Geri vitese çevir" />
+    <text name="settingTitle_reverseFlip" text="Geri Giderken Döndür" />
+    <text name="settingDescription_reverseFlip" text="Geri giderken kamerayı döndürür" />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Kamera Dönüşünü Aç/Kapat" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Takip Kamerasını Aç/Kapat" />
 
   </texts>
 </l10n>
-

@@ -1,76 +1,64 @@
--- Camera Rotation Vehicle Logic
--- Handles camera rotation based on steering angle and reverse direction
+-- Camera Rotation Vehicle Logic (Heading-Trail model)
+-- The third-person camera trails the vehicle's WORLD HEADING with spring
+-- damping -- like the chase cameras in GTA V / Forza Horizon. It reacts to how
+-- the chassis actually turns through the world, NOT to the steering-wheel angle,
+-- so it never swings while stationary and settles smoothly behind you.
 
 CameraRotationVehicle = {}
 
--- Returns the vehicle's steering node for rotation calculations
-local function getSteeringNode(vehicle)
-  local n
-  if type(vehicle.getAIRootNode) == "function" then 
-    n = vehicle:getAIRootNode()
-    if n ~= nil then 
-      return n
-    end 
-  end 
-  if vehicle.steeringAxleNode ~= nil and vehicle.steeringAxleNode ~= 0 then 
-    return vehicle.steeringAxleNode
-  end 
-  if vehicle.components ~= nil and vehicle.components[1] ~= nil and vehicle.components[1].node ~= nil then
-    return vehicle.components[1].node
-  end
-  return nil
-end
+-- Sign of the trail injection. If the camera LEADS into turns instead of
+-- trailing behind them, flip this to 1.
+local TRAIL_SIGN = -1
 
-local function getRelativeYRotation(root, node)
-  if root == nil or node == nil then
-    return 0
-  end
-  local x, y, z = worldDirectionToLocal(node, localDirectionToWorld(root, 0, 0, 1))
-  local dot = z
-  local len = 0
-  if math.abs(z) < 1e-6 then 
-    len = math.abs(x)
-  elseif math.abs(x) < 1e-6 then 
-    len = math.abs(z) 
-  else 
-    len = math.sqrt(x*x + z*z)
-  end 
-  dot = dot / len
-  local angle = math.acos(dot)
-  if x < 0 then
-    angle = -angle
-  end
-  return angle
-end
-
--- Normalizes angle to -π to π range
-local function normalizeAngle(angle)
-  local normalizedAngle = angle
-  while normalizedAngle > math.pi do
-    normalizedAngle = normalizedAngle - math.pi - math.pi
-  end 
-  while normalizedAngle <= -math.pi do
-    normalizedAngle = normalizedAngle + math.pi + math.pi
-  end
-  return normalizedAngle
-end
-
--- Normalizes camera angle to 0 to 2π range
-local function normalizeAngleCam(angle)
-  local normalizedAngle = angle
-  while normalizedAngle > math.pi + math.pi do
-    normalizedAngle = normalizedAngle - math.pi - math.pi
-  end 
-  while normalizedAngle < 0 do
-    normalizedAngle = normalizedAngle + math.pi + math.pi
-  end
-  return normalizedAngle
-end
+-- Speed window (km/h) over which trailing fades in. Below MIN it is fully off
+-- (so pivoting in place / parking never swings the view); at/above FULL it is
+-- fully engaged.
+local TRAIL_SPEED_MIN = 2.0
+local TRAIL_SPEED_FULL = 12.0
 
 local function clamp(value, min, max)
   if value < min then return min end
   if value > max then return max end
   return value
+end
+
+-- Normalizes angle to (-pi, pi]
+local function normalizeAngle(angle)
+  local a = angle
+  while a > math.pi do a = a - 2 * math.pi end
+  while a <= -math.pi do a = a + 2 * math.pi end
+  return a
+end
+
+-- Normalizes angle to [0, 2pi)
+local function normalizeAngleCam(angle)
+  local a = angle
+  while a >= 2 * math.pi do a = a - 2 * math.pi end
+  while a < 0 do a = a + 2 * math.pi end
+  return a
+end
+
+-- Chassis body node (NOT the steering axle -- we want the body's heading).
+local function getBodyNode(vehicle)
+  if vehicle.components ~= nil and vehicle.components[1] ~= nil and vehicle.components[1].node ~= nil then
+    return vehicle.components[1].node
+  end
+  if vehicle.rootNode ~= nil and vehicle.rootNode ~= 0 then
+    return vehicle.rootNode
+  end
+  return nil
+end
+
+-- World heading (yaw, radians) of the vehicle body from its forward vector.
+local function getVehicleHeading(node)
+  if node == nil then
+    return nil
+  end
+  local dx, _, dz = localDirectionToWorld(node, 0, 0, 1)
+  if MathUtil ~= nil and MathUtil.getYRotationFromDirection ~= nil then
+    return MathUtil.getYRotationFromDirection(dx, dz)
+  end
+  return math.atan2(dx, dz)
 end
 
 -- Checks if camera exists and is rotatable
@@ -88,19 +76,6 @@ local function isValidCam(vehicle, camIndex)
   return camera.vehicle == vehicle and camera.isRotatable
 end
 
--- Calculates absolute rotation Y relative to steering node
-local function getAbsolutRotY(vehicle, camIndex)
-  if not isValidCam(vehicle, camIndex) then
-    return 0
-  end
-  local camera = vehicle.spec_enterable.cameras[camIndex]
-  local steeringNode = getSteeringNode(vehicle)
-  if steeringNode == nil then
-    return 0
-  end
-  return getRelativeYRotation(camera.cameraNode, steeringNode)
-end
-
 local function isVehicleControlledByPlayer(vehicle)
   if vehicle.getIsVehicleControlledByPlayer == nil then
     return false
@@ -108,30 +83,29 @@ local function isVehicleControlledByPlayer(vehicle)
   return vehicle:getIsVehicleControlledByPlayer()
 end
 
--- Determines if vehicle is moving forward based on direction and motor state
+-- Determines if the vehicle is travelling forward (for the optional reverse flip)
 local function isForward(vehicle)
   if vehicle.movingDirection == nil then
     return true
   end
   if math.abs(vehicle:getLastSpeed()) < 5 then
-    if vehicle.spec_motorized ~= nil and vehicle.spec_motorized.motor ~= nil then 
+    if vehicle.spec_motorized ~= nil and vehicle.spec_motorized.motor ~= nil then
       local motor = vehicle.spec_motorized.motor
-      if motor.currentDirection < 0 then 
+      if motor.currentDirection < 0 then
         return false
-      elseif motor.currentDirection > 0 then 
+      elseif motor.currentDirection > 0 then
         return true
-      end 
-    end 
-  elseif vehicle.movingDirection < 0 then 
+      end
+    end
+  elseif vehicle.movingDirection < 0 then
     return false
-  elseif vehicle.movingDirection > 0 then 
+  elseif vehicle.movingDirection > 0 then
     return true
   end
   return true
 end
 
--- Main camera rotation update function
--- Applies steering-based rotation and reverse flip based on mod settings
+-- Main per-frame update: trail the camera behind the vehicle's heading.
 local function updateCameraRotation(vehicle, dt)
   if not CameraRotationSettings.isEnabled then
     return
@@ -158,148 +132,90 @@ local function updateCameraRotation(vehicle, dt)
   if not camera.isRotatable or camera.vehicle ~= vehicle then
     return
   end
-  
+
   local isInside = camera.isInside
-  
   if not isInside and not CameraRotationSettings.thirdPersonRotation then
     return
   end
+
   if vehicle.spec_cameraRotation == nil then
     vehicle.spec_cameraRotation = {
       lastCamIndex = nil,
       zeroCamRotY = nil,
-      lastCamRotY = nil,
+      lastAppliedRotY = nil,
+      lastHeading = nil,
       lastCamFwd = nil,
-      lastFactor = 0
+      trail = 0
     }
   end
 
   local spec = vehicle.spec_cameraRotation
-  local isForwardDir = isForward(vehicle)
 
-  if spec.lastCamIndex == nil or spec.lastCamIndex ~= i then
-    if spec.lastCamIndex ~= nil and spec.zeroCamRotY ~= nil and spec.lastCamRotY ~= nil and isValidCam(vehicle, spec.lastCamIndex) then
-      local oldCam = vehicle.spec_enterable.cameras[spec.lastCamIndex]
-      oldCam.rotY = normalizeAngleCam(spec.zeroCamRotY + oldCam.rotY - spec.lastCamRotY)
-    end
+  -- Reset the baseline whenever the active camera changes.
+  if spec.lastCamIndex ~= i then
     spec.lastCamIndex = i
     spec.zeroCamRotY = camera.rotY
-    spec.lastCamRotY = camera.rotY
+    spec.lastAppliedRotY = camera.rotY
+    spec.lastHeading = nil
     spec.lastCamFwd = nil
+    spec.trail = 0
   end
 
-  local pi2 = math.pi / 2
-  local oldRotY = camera.rotY
-  local diff = oldRotY - spec.lastCamRotY
-
-  if diff ~= 0 then
-    spec.zeroCamRotY = spec.zeroCamRotY + diff
+  -- Absorb the player's manual look (mouse pan) since last frame into the
+  -- neutral, so trailing rides on top of wherever the player aimed the view.
+  local manualDiff = normalizeAngle(camera.rotY - spec.lastAppliedRotY)
+  if manualDiff ~= 0 then
+    spec.zeroCamRotY = spec.zeroCamRotY + manualDiff
   end
 
-  local aRotY = normalizeAngle(getAbsolutRotY(vehicle, i) - camera.rotY + spec.zeroCamRotY)
-  local isRev = false
-  if -pi2 < aRotY and aRotY < pi2 then
-    isRev = true
-  end
-
+  -- Optional 180-degree flip of the neutral when switching forward <-> reverse.
+  local isForwardDir = isForward(vehicle)
   if CameraRotationSettings.reverseFlip then
-    if spec.lastCamFwd == nil or spec.lastCamFwd ~= isForwardDir then
-      if isRev == isForwardDir then
-        if math.abs(spec.zeroCamRotY - math.pi) < 0.1 then 
-          spec.zeroCamRotY = 0
-        elseif spec.zeroCamRotY > math.pi + math.pi - 0.1 then 
-          spec.zeroCamRotY = math.pi
-        elseif spec.zeroCamRotY < 0.1 then 
-          spec.zeroCamRotY = math.pi
-        elseif spec.zeroCamRotY >= math.pi then 
-          spec.zeroCamRotY = spec.zeroCamRotY - math.pi 
-        else 
-          spec.zeroCamRotY = spec.zeroCamRotY + math.pi 
-        end
-        spec.zeroCamRotY = normalizeAngleCam(spec.zeroCamRotY)
-        isRev = not isRev
-      end
+    if spec.lastCamFwd ~= nil and spec.lastCamFwd ~= isForwardDir then
+      spec.zeroCamRotY = spec.zeroCamRotY + math.pi
     end
     spec.lastCamFwd = isForwardDir
   end
 
-  local newRotY = spec.zeroCamRotY
+  -- Heading delta of the chassis this frame.
+  local heading = getVehicleHeading(getBodyNode(vehicle))
+  local deltaHeading = 0
+  if heading ~= nil and spec.lastHeading ~= nil then
+    deltaHeading = normalizeAngle(heading - spec.lastHeading)
+  end
+  spec.lastHeading = heading
 
-  local rotIsOn = 2
-  if rotIsOn > 0 and vehicle.rotatedTime ~= nil then
-    -- Calculate steering factor from vehicle rotation time
-    local f = 0
-    if vehicle.rotatedTime > 0 and vehicle.maxRotTime ~= nil and vehicle.maxRotTime > 0 then
-      f = vehicle.rotatedTime / vehicle.maxRotTime
-    elseif vehicle.rotatedTime < 0 and vehicle.minRotTime ~= nil and vehicle.minRotTime < 0 then
-      f = vehicle.rotatedTime / vehicle.minRotTime
-    end
+  -- Fade trailing in with speed so parking / pivoting doesn't swing the view.
+  local speed = math.abs(vehicle:getLastSpeed())
+  local speedFactor = clamp((speed - TRAIL_SPEED_MIN) / (TRAIL_SPEED_FULL - TRAIL_SPEED_MIN), 0, 1)
 
-    -- Apply curve to steering input (dead zone below 0.1)
-    if f < 0.1 then
-      f = 0
-    else
-      f = 1.2345679 * (f - 0.1) * (f - 0.1) / 0.81
-    end
+  local strength = CameraRotationSettings.rotationSpeed    -- reused: trail intensity (0..~1.2)
+  local tau = CameraRotationSettings.rotationDelay         -- reused: catch-up time constant (seconds)
+  local maxAngle = CameraRotationSettings.maxRotationAngle
 
-    -- Normalize direction
-    if vehicle.rotatedTime < 0 then
-      f = -f
-    end
+  -- Inject lag: the camera briefly holds its world direction as the body turns.
+  spec.trail = spec.trail + TRAIL_SIGN * deltaHeading * strength * speedFactor
 
-    -- Apply spring arm delay (smoothing) - how long it takes to respond to steering
-    local maxChange = CameraRotationSettings.rotationDelay * dt
-    spec.lastFactor = spec.lastFactor + clamp(f - spec.lastFactor, -maxChange, maxChange)
-    local smoothedF = spec.lastFactor
-
-    -- Calculate target rotation offset based on steering input
-    -- Target is always based on maxRotationAngle (independent of rotationSpeed)
-    -- Invert rotation direction when reverse flip is active and we're in reverse
-    local rotationDirection = 1
-    if CameraRotationSettings.reverseFlip and isRev then
-      rotationDirection = -1
-    end
-    local targetRotationOffset = smoothedF * CameraRotationSettings.maxRotationAngle * rotationDirection
-    
-    -- Get current rotation offset from zero position
-    local currentRotationOffset = normalizeAngle(newRotY - spec.zeroCamRotY)
-    
-    -- Calculate difference to target
-    local rotationDiff = normalizeAngle(targetRotationOffset - currentRotationOffset)
-    
-    -- Apply rotation speed as rate coefficient (how fast we move towards target)
-    -- rotationSpeed is a linear coefficient: scales the rotation rate per unit of steering
-    local rotationDelta = rotationDiff * CameraRotationSettings.rotationSpeed * dt * 10
-    
-    -- Clamp rotation delta to prevent overshooting
-    if math.abs(rotationDelta) > math.abs(rotationDiff) then
-      rotationDelta = rotationDiff
-    end
-    
-    -- Apply rotation
-    newRotY = newRotY + rotationDelta
-    
-    -- Apply rotation limit (max angle from forward vector, excluding reverse flip)
-    -- This is the hard limit that should never be exceeded
-    local maxAngle = CameraRotationSettings.maxRotationAngle
-    local finalRotationOffset = normalizeAngle(newRotY - spec.zeroCamRotY)
-    
-    if math.abs(finalRotationOffset) > maxAngle then
-      if finalRotationOffset > 0 then
-        newRotY = spec.zeroCamRotY + maxAngle
-      else
-        newRotY = spec.zeroCamRotY - maxAngle
-      end
-      newRotY = normalizeAngleCam(newRotY)
-    end
+  -- Spring the trail back toward centered (catch up to the vehicle heading).
+  -- Frame-rate independent exponential decay with time constant tau.
+  if tau > 0.0001 then
+    local relax = 1 - math.exp(-(dt / 1000) / tau)
+    spec.trail = spec.trail - spec.trail * relax
   else
-    spec.lastFactor = 0
+    spec.trail = 0
   end
 
-  -- Apply rotation to camera
-  camera.rotY = normalizeAngleCam(newRotY)
+  -- When effectively stopped, actively re-center so the view settles behind you.
+  if speedFactor <= 0 and math.abs(spec.trail) < 0.0005 then
+    spec.trail = 0
+  end
 
-  spec.lastCamRotY = camera.rotY
+  -- Clamp so the camera never swings past the limit.
+  spec.trail = clamp(spec.trail, -maxAngle, maxAngle)
+
+  local newRotY = normalizeAngleCam(spec.zeroCamRotY + spec.trail)
+  camera.rotY = newRotY
+  spec.lastAppliedRotY = newRotY
 end
 
 -- Registers hook into Vehicle.update to apply camera rotation each frame
@@ -318,7 +234,7 @@ local function onToggleCameraRotation(vehicle, actionName, inputValue, callbackS
   if inputValue == 1 then
     CameraRotationSettings.isEnabled = not CameraRotationSettings.isEnabled
     CameraRotationSettings:save()
-    
+
     -- Update UI if settings frame is open
     if CameraRotationSettings.enabledOption ~= nil then
       CameraRotationSettings:updateSettings()
@@ -355,4 +271,3 @@ local function registerActionEvents(vehicle, isActiveForInput, isActiveForInputI
 end
 
 CameraRotationVehicle.registerActionEvents = registerActionEvents
-

@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="攝影機旋轉" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="啟用攝影機旋轉" />
-    <text name="settingDescription_cameraRotationEnabled" text="啟用旋轉" />
+    <text name="ui_cameraRotationSettingsTitle" text="跟隨攝影機" />
 
-    <text name="settingTitle_thirdPersonRotation" text="第三人稱旋轉" />
-    <text name="settingDescription_thirdPersonRotation" text="啟用外部攝影機" />
+    <text name="settingTitle_cameraRotationEnabled" text="啟用跟隨攝影機" />
+    <text name="settingDescription_cameraRotationEnabled" text="攝影機會跟隨你行駛的方向" />
 
-    <text name="settingTitle_rotationSpeed" text="旋轉速度" />
-    <text name="settingDescription_rotationSpeed" text="旋轉速度" />
+    <text name="settingTitle_thirdPersonRotation" text="室外攝影機跟隨" />
+    <text name="settingDescription_thirdPersonRotation" text="為室外攝影機啟用此功能" />
 
-    <text name="settingTitle_rotationDelay" text="旋轉延遲" />
-    <text name="settingDescription_rotationDelay" text="旋轉平滑度" />
+    <text name="settingTitle_rotationSpeed" text="擺動幅度" />
+    <text name="settingDescription_rotationSpeed" text="攝影機跟隨行駛方向的強度" />
 
+    <text name="settingTitle_rotationDelay" text="回正平滑度" />
+    <text name="settingDescription_rotationDelay" text="攝影機回到車輛正後方的緩慢程度" />
 
-    <text name="settingTitle_maxRotationAngle" text="旋轉限制" />
-    <text name="settingDescription_maxRotationAngle" text="最大角度" />
+    <text name="settingTitle_maxRotationAngle" text="擺動上限" />
+    <text name="settingDescription_maxRotationAngle" text="限制攝影機向外擺動的最大角度" />
 
-    <text name="settingTitle_reverseFlip" text="倒車翻轉" />
-    <text name="settingDescription_reverseFlip" text="倒車時翻轉" />
+    <text name="settingTitle_reverseFlip" text="倒車時翻轉" />
+    <text name="settingDescription_reverseFlip" text="倒車時翻轉攝影機" />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="切換攝影機旋轉" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="切換跟隨攝影機" />
 
   </texts>
 </l10n>
-

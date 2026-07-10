@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Rotação da Câmera" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Rotação da Câmera Ativada" />
-    <text name="settingDescription_cameraRotationEnabled" text="Ativar rotação" />
+    <text name="ui_cameraRotationSettingsTitle" text="Câmera com Arrasto" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Rotação em Terceira Pessoa" />
-    <text name="settingDescription_thirdPersonRotation" text="Ativar para câmeras externas" />
+    <text name="settingTitle_cameraRotationEnabled" text="Ativar Arrasto da Câmera" />
+    <text name="settingDescription_cameraRotationEnabled" text="A câmera acompanha com atraso a direção em que você dirige" />
 
-    <text name="settingTitle_rotationSpeed" text="Velocidade de Rotação" />
-    <text name="settingDescription_rotationSpeed" text="Velocidade de rotação" />
+    <text name="settingTitle_thirdPersonRotation" text="Arrasto na Câmera Externa" />
+    <text name="settingDescription_thirdPersonRotation" text="Ativa o efeito nas câmeras externas" />
 
-    <text name="settingTitle_rotationDelay" text="Atraso de Rotação" />
-    <text name="settingDescription_rotationDelay" text="Suavização da rotação" />
+    <text name="settingTitle_rotationSpeed" text="Intensidade do Balanço" />
+    <text name="settingDescription_rotationSpeed" text="O quanto a câmera acompanha a direção do veículo" />
 
+    <text name="settingTitle_rotationDelay" text="Suavidade do Retorno" />
+    <text name="settingDescription_rotationDelay" text="A suavidade com que a câmera volta para trás do veículo" />
 
-    <text name="settingTitle_maxRotationAngle" text="Limite de Rotação" />
-    <text name="settingDescription_maxRotationAngle" text="Ângulo máximo" />
+    <text name="settingTitle_maxRotationAngle" text="Limite do Balanço" />
+    <text name="settingDescription_maxRotationAngle" text="Limita o quanto a câmera se afasta do centro" />
 
-    <text name="settingTitle_reverseFlip" text="Inversão ao Ré" />
-    <text name="settingDescription_reverseFlip" text="Inverter ao dar ré" />
+    <text name="settingTitle_reverseFlip" text="Girar ao Dar Ré" />
+    <text name="settingDescription_reverseFlip" text="Gira a câmera 180° ao dar ré" />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Alternar Rotação da Câmera" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Alternar Câmera com Arrasto" />
 
   </texts>
 </l10n>
-

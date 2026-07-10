@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Rotation de la Caméra" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Rotation de la Caméra Activée" />
-    <text name="settingDescription_cameraRotationEnabled" text="Activer la rotation" />
+    <text name="ui_cameraRotationSettingsTitle" text="Caméra suiveuse" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Rotation Caméra Extérieure" />
-    <text name="settingDescription_thirdPersonRotation" text="Activer pour caméras extérieures" />
+    <text name="settingTitle_cameraRotationEnabled" text="Activer caméra suiveuse" />
+    <text name="settingDescription_cameraRotationEnabled" text="La caméra suit la direction dans laquelle vous roulez." />
 
-    <text name="settingTitle_rotationSpeed" text="Vitesse de Rotation" />
-    <text name="settingDescription_rotationSpeed" text="Coefficient linéaire de l'angle de braquage" />
+    <text name="settingTitle_thirdPersonRotation" text="Suivi caméra extérieure" />
+    <text name="settingDescription_thirdPersonRotation" text="Activer pour les caméras extérieures." />
 
-    <text name="settingTitle_rotationDelay" text="Délai de Rotation" />
-    <text name="settingDescription_rotationDelay" text="Temps de réponse du bras à ressort" />
+    <text name="settingTitle_rotationSpeed" text="Force du balancement" />
+    <text name="settingDescription_rotationSpeed" text="Intensité avec laquelle la caméra suit votre direction." />
 
+    <text name="settingTitle_rotationDelay" text="Douceur du retour" />
+    <text name="settingDescription_rotationDelay" text="Lenteur avec laquelle la caméra revient derrière vous." />
 
-    <text name="settingTitle_maxRotationAngle" text="Limite de Rotation" />
-    <text name="settingDescription_maxRotationAngle" text="Angle max depuis le vecteur avant" />
+    <text name="settingTitle_maxRotationAngle" text="Limite de balancement" />
+    <text name="settingDescription_maxRotationAngle" text="Limite jusqu'où la caméra se décale sur le côté." />
 
-    <text name="settingTitle_reverseFlip" text="Retournement en Marche Arrière" />
-    <text name="settingDescription_reverseFlip" text="Retourner en marche arrière" />
+    <text name="settingTitle_reverseFlip" text="Pivoter en marche arrière" />
+    <text name="settingDescription_reverseFlip" text="Pivote la caméra en marche arrière." />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Activer/Désactiver Rotation Caméra" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Activer/désactiver caméra suiveuse" />
 
   </texts>
 </l10n>
-

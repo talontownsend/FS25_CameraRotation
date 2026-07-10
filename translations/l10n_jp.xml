@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="カメラ回転" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="カメラ回転を有効化" />
-    <text name="settingDescription_cameraRotationEnabled" text="回転を有効化" />
+    <text name="ui_cameraRotationSettingsTitle" text="追従カメラ" />
 
-    <text name="settingTitle_thirdPersonRotation" text="三人称回転" />
-    <text name="settingDescription_thirdPersonRotation" text="外部カメラで有効化" />
+    <text name="settingTitle_cameraRotationEnabled" text="追従カメラを有効化" />
+    <text name="settingDescription_cameraRotationEnabled" text="進行方向へカメラが追従します" />
 
-    <text name="settingTitle_rotationSpeed" text="回転速度" />
-    <text name="settingDescription_rotationSpeed" text="回転速度" />
+    <text name="settingTitle_thirdPersonRotation" text="車外カメラも追従" />
+    <text name="settingDescription_thirdPersonRotation" text="車外カメラで有効にします" />
 
-    <text name="settingTitle_rotationDelay" text="回転遅延" />
-    <text name="settingDescription_rotationDelay" text="回転の滑らかさ" />
+    <text name="settingTitle_rotationSpeed" text="振れの強さ" />
+    <text name="settingDescription_rotationSpeed" text="カメラが進行方向へ追従する強さ" />
 
+    <text name="settingTitle_rotationDelay" text="戻りの滑らかさ" />
+    <text name="settingDescription_rotationDelay" text="カメラが背後へ戻る際の滑らかさ" />
 
-    <text name="settingTitle_maxRotationAngle" text="回転制限" />
-    <text name="settingDescription_maxRotationAngle" text="最大角度" />
+    <text name="settingTitle_maxRotationAngle" text="最大振れ角" />
+    <text name="settingDescription_maxRotationAngle" text="カメラが振れる最大角度を制限します" />
 
-    <text name="settingTitle_reverseFlip" text="バック時の反転" />
-    <text name="settingDescription_reverseFlip" text="バック時に反転" />
+    <text name="settingTitle_reverseFlip" text="後退時に反転" />
+    <text name="settingDescription_reverseFlip" text="後退時にカメラを反転します" />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="カメラ回転の切り替え" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="追従カメラの切り替え" />
 
   </texts>
 </l10n>
-

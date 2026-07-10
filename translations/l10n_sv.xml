@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="Kamerarotation" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="Kamerarotation Aktiverad" />
-    <text name="settingDescription_cameraRotationEnabled" text="Aktivera rotation" />
+    <text name="ui_cameraRotationSettingsTitle" text="Släpkamera" />
 
-    <text name="settingTitle_thirdPersonRotation" text="Tredjeperson Rotation" />
-    <text name="settingDescription_thirdPersonRotation" text="Aktivera för externa kameror" />
+    <text name="settingTitle_cameraRotationEnabled" text="Aktivera släpkamera" />
+    <text name="settingDescription_cameraRotationEnabled" text="Kameran släpar efter i körriktningen" />
 
-    <text name="settingTitle_rotationSpeed" text="Rotationshastighet" />
-    <text name="settingDescription_rotationSpeed" text="Rotationshastighet" />
+    <text name="settingTitle_thirdPersonRotation" text="Utvändig släpkamera" />
+    <text name="settingDescription_thirdPersonRotation" text="Aktivera för utvändiga kameror" />
 
-    <text name="settingTitle_rotationDelay" text="Rotationsfördröjning" />
-    <text name="settingDescription_rotationDelay" text="Rotationsutjämning" />
+    <text name="settingTitle_rotationSpeed" text="Svängstyrka" />
+    <text name="settingDescription_rotationSpeed" text="Hur kraftigt kameran släpar efter din riktning" />
 
+    <text name="settingTitle_rotationDelay" text="Återgångsmjukhet" />
+    <text name="settingDescription_rotationDelay" text="Hur långsamt kameran återgår bakom dig" />
 
-    <text name="settingTitle_maxRotationAngle" text="Rotationsgräns" />
-    <text name="settingDescription_maxRotationAngle" text="Max vinkel" />
+    <text name="settingTitle_maxRotationAngle" text="Svänggräns" />
+    <text name="settingDescription_maxRotationAngle" text="Begränsar hur långt kameran svänger ut" />
 
-    <text name="settingTitle_reverseFlip" text="Omvänd vändning" />
-    <text name="settingDescription_reverseFlip" text="Vända vid backning" />
+    <text name="settingTitle_reverseFlip" text="Vänd vid backning" />
+    <text name="settingDescription_reverseFlip" text="Vänder kameran när du backar" />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="Växla Kamerarotation" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="Växla släpkamera" />
 
   </texts>
 </l10n>
-

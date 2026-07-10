@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <l10n>
   <texts>
-    <text name="ui_cameraRotationSettingsTitle" text="카메라 회전" />
-    
-    <text name="settingTitle_cameraRotationEnabled" text="카메라 회전 활성화" />
-    <text name="settingDescription_cameraRotationEnabled" text="회전 활성화" />
+    <text name="ui_cameraRotationSettingsTitle" text="추적 카메라" />
 
-    <text name="settingTitle_thirdPersonRotation" text="3인칭 회전" />
-    <text name="settingDescription_thirdPersonRotation" text="외부 카메라 활성화" />
+    <text name="settingTitle_cameraRotationEnabled" text="추적 카메라 사용" />
+    <text name="settingDescription_cameraRotationEnabled" text="카메라가 주행 방향을 따라 움직입니다" />
 
-    <text name="settingTitle_rotationSpeed" text="회전 속도" />
-    <text name="settingDescription_rotationSpeed" text="회전 속도" />
+    <text name="settingTitle_thirdPersonRotation" text="외부 카메라 추적" />
+    <text name="settingDescription_thirdPersonRotation" text="외부 카메라에서도 사용합니다" />
 
-    <text name="settingTitle_rotationDelay" text="회전 지연" />
-    <text name="settingDescription_rotationDelay" text="회전 부드러움" />
+    <text name="settingTitle_rotationSpeed" text="스윙 강도" />
+    <text name="settingDescription_rotationSpeed" text="카메라가 진행 방향을 얼마나 강하게 따라가는지 결정합니다" />
 
+    <text name="settingTitle_rotationDelay" text="복귀 부드러움" />
+    <text name="settingDescription_rotationDelay" text="카메라가 다시 뒤쪽으로 얼마나 천천히 돌아오는지 결정합니다" />
 
-    <text name="settingTitle_maxRotationAngle" text="회전 제한" />
-    <text name="settingDescription_maxRotationAngle" text="최대 각도" />
+    <text name="settingTitle_maxRotationAngle" text="스윙 제한" />
+    <text name="settingDescription_maxRotationAngle" text="카메라가 옆으로 벗어나는 최대 각도를 제한합니다" />
 
-    <text name="settingTitle_reverseFlip" text="후진 뒤집기" />
-    <text name="settingDescription_reverseFlip" text="후진 시 뒤집기" />
+    <text name="settingTitle_reverseFlip" text="후진 시 반전" />
+    <text name="settingDescription_reverseFlip" text="후진할 때 카메라를 반전합니다" />
 
-    <text name="input_CAMERA_ROTATION_TOGGLE" text="카메라 회전 전환" />
+    <text name="input_CAMERA_ROTATION_TOGGLE" text="추적 카메라 전환" />
 
   </texts>
 </l10n>
-
