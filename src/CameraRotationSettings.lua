@@ -14,13 +14,20 @@ CameraRotationSettings.settingsDone = false
 CameraRotationSettings.cachedFrame = nil
 CameraRotationSettings.isUpdatingFromKeybind = false
 
--- Returns path to settings XML file (per-savegame or user profile)
+-- Returns path to settings XML file (user profile modSettings folder).
+-- IMPORTANT: g_currentModSettingsDirectory / g_currentModName are only valid
+-- while THIS mod is loading; at runtime they hold the LAST-loaded mod's
+-- values. Capture them at file scope (which runs at load time) — otherwise
+-- save() writes into another mod's settings folder and this mod's own
+-- settings silently never persist.
+local capturedSettingsDirectory = g_currentModSettingsDirectory
+local capturedModName = g_currentModName or "FS25_CameraRotation"
+
 local function getSettingsFileName()
-  if g_currentModSettingsDirectory ~= nil then
-    return g_currentModSettingsDirectory .. "settings.xml"
+  if capturedSettingsDirectory ~= nil then
+    return capturedSettingsDirectory .. "settings.xml"
   end
-  local modName = g_currentModName or "FS25_CameraRotation"
-  return getUserProfileAppPath() .. "modSettings/" .. modName .. "/settings.xml"
+  return getUserProfileAppPath() .. "modSettings/" .. capturedModName .. "/settings.xml"
 end
 
 -- Loads settings from XML file (fallback if vanilla settings not available)
